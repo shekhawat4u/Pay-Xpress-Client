@@ -22,12 +22,41 @@ interface Transaction {
 export default function DashboardPage() {
   const [transactions, setTransactions] = useState<Transaction[]>([])
   const [loading, setLoading] = useState(true)
+  const [isAdmin, setIsAdmin] = useState(false)
+  const [rawUser, setRawUser] = useState<any | null>(null)
+  const [tokenVal, setTokenVal] = useState<string | null>(null)
 
   useEffect(() => {
     fetchTransactions()
     const interval = setInterval(fetchTransactions, 5000)
     return () => clearInterval(interval)
   }, [])
+
+  useEffect(() => {
+  const token = localStorage.getItem("token");
+  setTokenVal(token);
+
+  if (token) {
+    const loadUser = async () => {
+      try {
+        const base = process.env.NEXT_PUBLIC_SERVER_URL || "http://localhost:5000";
+        const res = await fetch(`${base}/api/user/me`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        const data = await res.json();
+        if (data.success && data.user) {
+          setRawUser(data.user);
+          setIsAdmin(!!data.user.isAdmin);
+          localStorage.setItem("user", JSON.stringify(data.user));
+        }
+      } catch (err) {
+        console.error("Failed to load user from token:", err);
+      }
+    };
+    loadUser();
+  }
+}, []);
+
 
   const fetchTransactions = async () => {
     try {
@@ -45,18 +74,30 @@ export default function DashboardPage() {
 
   return (
     <div className="p-8">
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-8 flex-wrap gap-4">
         <div>
           <h1 className="text-4xl font-bold">Dashboard</h1>
           <p className="text-muted-foreground mt-2">Welcome back! Here's your payment overview.</p>
         </div>
-        <Link
-          href="/pay-in"
-          className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition"
-        >
-          <Plus size={20} />
-          New Payment
-        </Link>
+
+        <div className="flex gap-3 flex-wrap">
+          {isAdmin && (
+            <Link
+              href="/admin"
+              className="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-secondary/90 transition"
+            >
+              Admin Panel
+            </Link>
+          )}
+
+          <Link
+            href="/pay-in"
+            className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg flex items-center gap-2 transition"
+          >
+            <Plus size={20} />
+            New Payment
+          </Link>
+        </div>
       </div>
 
       <DashboardStats transactions={transactions} />

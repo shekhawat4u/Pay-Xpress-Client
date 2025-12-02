@@ -56,7 +56,7 @@ export default function Sidebar() {
       <Toaster position="top-right" reverseOrder={false} />
 
       {/* Logo */}
-      <Link href="/dashboard" className="px-6 py-8 border-b border-border flex items-center gap-3">
+      <Link href="/" className="px-6 py-8 border-b border-border flex items-center gap-3">
         <img src="/Pay_Express_01.png" alt="Pay Xpress" className="h-8 w-auto" />
       </Link>
 

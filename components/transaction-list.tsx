@@ -20,6 +20,7 @@ interface Transaction {
 interface TransactionListProps {
   transactions: Transaction[]
   highlightedTxn?: string
+  onRowClick?: (id: string) => void
 }
 
 export default function TransactionList({ transactions, highlightedTxn }: TransactionListProps) {
@@ -82,7 +83,8 @@ export default function TransactionList({ transactions, highlightedTxn }: Transa
           {transactions.map((txn) => (
             <tr
               key={txn.id}
-              className={`border-b border-border hover:bg-background transition ${
+              onClick={() => onRowClick && onRowClick(txn.id)}
+              className={`border-b border-border hover:bg-background transition cursor-pointer ${
                 txn.order_id === highlightedTxn ? "bg-primary/10" : ""
               }`}
             >
@@ -94,7 +96,7 @@ export default function TransactionList({ transactions, highlightedTxn }: Transa
               <td className="px-6 py-4 text-sm">
                 <div className="flex items-center gap-2">
                   <code className="text-primary">{txn.order_id.slice(0, 12)}...</code>
-                  <button onClick={() => copyToClipboard(txn.order_id, txn.id)} className="hover:opacity-70 transition">
+                  <button onClick={(e) => { e.stopPropagation(); copyToClipboard(txn.order_id, txn.id); }} className="hover:opacity-70 transition">
                     <Copy size={16} />
                   </button>
                   {copiedId === txn.id && <span className="text-xs text-secondary">Copied!</span>}
@@ -114,7 +116,7 @@ export default function TransactionList({ transactions, highlightedTxn }: Transa
                   <div className="flex items-center gap-2">
                     <code className="text-muted-foreground">{txn.payment_id.slice(0, 12)}...</code>
                     <button
-                      onClick={() => copyToClipboard(txn.payment_id, `${txn.id}-payment`)}
+                      onClick={(e) => { e.stopPropagation(); copyToClipboard(txn.payment_id, `${txn.id}-payment`); }}
                       className="hover:opacity-70 transition"
                     >
                       <Copy size={16} />
