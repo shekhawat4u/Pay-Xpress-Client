@@ -30,9 +30,9 @@ export default function PaymentPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
           <div
             onClick={() => router.push("/")}
-            className="text-2xl font-bold text-primary cursor-pointer hover:opacity-80 transition"
+            className="flex items-center gap-3 text-2xl font-bold text-primary cursor-pointer hover:opacity-80 transition"
           >
-            Orion-Pay
+            <img src="/Pay_Express_01.png" alt="Pay Xpress" className="h-8 w-auto" />
           </div>
         </div>
       </nav>

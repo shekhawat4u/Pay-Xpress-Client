@@ -9,9 +9,9 @@ export default function Home() {
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-card border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="/">
-           <div className="text-2xl font-bold text-primary">Orion-Pay</div>
-          </a>
+            <a href="/" className="flex items-center gap-3">
+              <img src="/Pay_Express_01.png" alt="Pay Xpress" className="h-8 w-auto" />
+            </a>
          
           <div className="flex gap-4 items-center">
            
@@ -28,7 +28,7 @@ export default function Home() {
           <div>
             <h1 className="text-5xl font-bold mb-6 text-balance">Secure Payment Gateway Middleware</h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Orion-Pay acts as a trusted middleman between your application and Razorpay, providing a seamless payment
+              Pay Xpress acts as a trusted middleman between your application and Razorpay, providing a seamless payment
               experience with enterprise-grade security.
             </p>
             <div className="flex gap-4">
@@ -56,7 +56,7 @@ export default function Home() {
       {/* Features */}
       <section className="bg-card py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold mb-12 text-center">Why Orion-Pay?</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center">Why Pay Xpress?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { icon: Shield, title: "Secure", desc: "Bank-level encryption and signature verification" },
@@ -76,7 +76,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-background border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-foreground">
-          <p>© 2025 Orion-Pay. All rights reserved.</p>
+          <p>© 2025 Pay Xpress. All rights reserved.</p>
         </div>
       </footer>
     </main>

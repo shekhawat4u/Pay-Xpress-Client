@@ -26,7 +26,7 @@ export default function PaymentAPIPage() {
   const fetchApiKeys = async () => {
     try {
       // Simulating API fetch - in production, this would call the backend
-      const stored = localStorage.getItem("orionpay_api_keys")
+      const stored = localStorage.getItem("payxpress_api_keys")
       if (stored) {
         setApiKeys(JSON.parse(stored))
       }
@@ -50,7 +50,7 @@ export default function PaymentAPIPage() {
 
       const updated = [...apiKeys, newKey]
       setApiKeys(updated)
-      localStorage.setItem("orionpay_api_keys", JSON.stringify(updated))
+      localStorage.setItem("payxpress_api_keys", JSON.stringify(updated))
       setNewKeyName("")
     } catch (error) {
       console.error("Failed to generate API key:", error)
@@ -62,7 +62,7 @@ export default function PaymentAPIPage() {
   const deleteApiKey = (id: string) => {
     const updated = apiKeys.filter((k) => k.id !== id)
     setApiKeys(updated)
-    localStorage.setItem("orionpay_api_keys", JSON.stringify(updated))
+    localStorage.setItem("payxpress_api_keys", JSON.stringify(updated))
   }
 
   return (

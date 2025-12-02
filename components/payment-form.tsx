@@ -78,7 +78,7 @@ export default function PaymentForm({ onSuccess, onError }: PaymentFormProps) {
           order_id: orderData.data.order_id,
           amount: orderData.data.amount,
           currency: orderData.data.currency,
-          name: "Orion-Pay",
+          name: "Pay Xpress",
           description: formData.description,
           prefill: {
             name: formData.name,

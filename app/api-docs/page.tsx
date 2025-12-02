@@ -61,7 +61,7 @@ const apiEndpoints = [
     response: `{
   "success": true,
   "data": {
-    "link": "https://orionpay.com/pay/link_123456",
+    "link": "https://payxpress.com/pay/link_123456",
     "link_id": "link_123456"
   }
 }`,
@@ -172,7 +172,7 @@ export default function ApiDocsPage() {
     <div className="p-8">
       <div className="mb-8">
         <h1 className="text-4xl font-bold mb-2">API Documentation</h1>
-        <p className="text-muted-foreground">Complete guide to Orion-Pay payment API endpoints</p>
+        <p className="text-muted-foreground">Complete guide to Pay Xpress payment API endpoints</p>
       </div>
 
       {/* Authentication */}

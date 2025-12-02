@@ -12,8 +12,8 @@ export default function AuthLayout({
       {/* Navigation */}
       <nav className="sticky top-0 z-50 bg-card border-b border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-          <a href="/">
-            <div className="text-2xl font-bold text-primary">Orion-Pay</div>
+          <a href="/" className="flex items-center gap-3">
+            <img src="/Pay_Express_01.png" alt="Pay Xpress" className="h-8 w-auto" />
           </a>
 
 
@@ -41,7 +41,7 @@ export default function AuthLayout({
       {/* Footer */}
       <footer className="bg-background border-t border-border py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-foreground">
-          <p>© 2025 Orion-Pay. All rights reserved.</p>
+          <p>© 2025 Pay Xpress. All rights reserved.</p>
         </div>
       </footer>
     </main>

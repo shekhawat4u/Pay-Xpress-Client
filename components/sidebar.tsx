@@ -56,9 +56,8 @@ export default function Sidebar() {
       <Toaster position="top-right" reverseOrder={false} />
 
       {/* Logo */}
-      <Link href="/dashboard" className="px-6 py-8 border-b border-border">
-        <div className="text-2xl font-bold text-primary">Orion-Pay</div>
-        <p className="text-xs text-muted-foreground mt-1">Payment Gateway</p>
+      <Link href="/dashboard" className="px-6 py-8 border-b border-border flex items-center gap-3">
+        <img src="/Pay_Express_01.png" alt="Pay Xpress" className="h-8 w-auto" />
       </Link>
 
       {/* Main Menu */}

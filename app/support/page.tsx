@@ -5,12 +5,12 @@ import Link from "next/link"
 
 const faqs = [
   {
-    question: "How do I get started with Orion-Pay?",
+    question: "How do I get started with Pay Xpress?",
     answer:
       "Simply create an account, generate an API key from the Payment API section, and start integrating our endpoints into your application.",
   },
   {
-    question: "What payment methods does Orion-Pay support?",
+    question: "What payment methods does Pay Xpress support?",
     answer:
       "We support all payment methods offered by Razorpay including cards, UPI, net banking, and digital wallets.",
   },
@@ -41,7 +41,7 @@ export default function SupportPage() {
     <div className="p-8">
       <div className="mb-12">
         <h1 className="text-4xl font-bold mb-2">Support</h1>
-        <p className="text-muted-foreground">Get help with Orion-Pay</p>
+        <p className="text-muted-foreground">Get help with Pay Xpress</p>
       </div>
 
       {/* Contact Methods */}
@@ -49,8 +49,8 @@ export default function SupportPage() {
         <div className="bg-card border border-border rounded-lg p-8">
           <Mail className="text-primary mb-4" size={32} />
           <h3 className="text-xl font-bold mb-2">Email Support</h3>
-          <p className="text-muted-foreground mb-4">support@orionpay.com</p>
-          <Link href="mailto:support@orionpay.com" className="text-primary hover:underline">
+          <p className="text-muted-foreground mb-4">support@payxpress.com</p>
+          <Link href="mailto:support@payxpress.com" className="text-primary hover:underline">
             Send Email
           </Link>
         </div>

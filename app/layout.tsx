@@ -4,7 +4,7 @@ import "./globals.css"
 import ClientLayout from "./client-layout"
 
 export const metadata: Metadata = {
-  title: "Orion-Pay - Payment Gateway",
+  title: "Pay Xpress - Payment Gateway",
   description: "Simple and secure payment gateway middleware powered by Razorpay",
 }
 

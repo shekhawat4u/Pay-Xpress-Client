@@ -1,4 +1,4 @@
-## **Orion-Pay - Complete Feature List**
+## **Pay Xpress - Complete Feature List**
 
 ### **Frontend Pages & Navigation**
 
@@ -9,7 +9,7 @@
 5. **Settlement** - View settlement information and history
 6. **Export** - Export transaction data and reports
 7. **Payment API** - Generate and manage API keys for integration
-8. **API Documentation** - Complete guide on how to use the Orion-Pay API
+8. **API Documentation** - Complete guide on how to use the Pay Xpress API
 9. **Account** - User profile and account settings
 10. **Support** - Help and support page
 11. **Payment Page** - Razorpay checkout integration
@@ -54,7 +54,7 @@
 
 ### **Middleware Architecture**
 
-**Client Frontend** → **Orion-Pay API** → **Razorpay** → **Payment Processing**
+**Client Frontend** → **Pay Xpress API** → **Razorpay** → **Payment Processing**
 
 All payment requests go through the middleware layer, allowing you to:
 
@@ -79,7 +79,7 @@ All payment requests go through the middleware layer, allowing you to:
 - Loading states and error handling
 
 
-# Orion-Pay - Payment Gateway Middleware
+# Pay Xpress - Payment Gateway Middleware
 
 A production-ready payment gateway middleware that acts as a trusted middleman between your application and Razorpay, providing seamless payment processing with enterprise-grade security, API key management, and comprehensive transaction analytics.
 
@@ -87,8 +87,8 @@ A production-ready payment gateway middleware that acts as a trusted middleman b
 
 \`\`\`
 Client's Frontend
-      ↓
-Your Server API (Orion-Pay Middleware)
+  ↓
+Your Server API (Pay Xpress Middleware)
       ↓
 Razorpay API (create_order, verify_payment, payouts, refunds)
       ↓
@@ -98,7 +98,7 @@ Payment Done
 ## Project Structure
 
 \`\`\`
-orion-pay/
+payxpress/
 ├── client/                           # Frontend (Next.js)
 │   ├── app/
 │   │   ├── page.tsx                 # Home page
@@ -622,9 +622,9 @@ Built with Next.js, Express, TypeScript, and Razorpay API.
 
 ---
 
-**Ready to accept payments? Start with Orion-Pay today!**
+**Ready to accept payments? Start with Pay Xpress today!**
 
-feat: implement core Orion-Pay features and frontend UI
+feat: implement core Pay Xpress features and frontend UI
 
 - Added authentication flow:
   - Sign Up with OTP verification

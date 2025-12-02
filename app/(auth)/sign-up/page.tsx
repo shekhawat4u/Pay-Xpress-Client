@@ -49,7 +49,7 @@ export default function SignUp() {
         <div className="w-full max-w-md bg-card border border-border rounded-xl p-8 shadow-sm">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold mb-2">Create Account</h1>
-            <p className="text-muted-foreground">Join Orion Pay today</p>
+            <p className="text-muted-foreground">Join Pay Xpress today</p>
           </div>
 
           <form onSubmit={handleSignUp} className="space-y-4">
