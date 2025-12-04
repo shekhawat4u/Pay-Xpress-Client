@@ -2,6 +2,9 @@
 
 import Link from "next/link"
 import { ArrowRight, Shield, Zap, BarChart3 } from "lucide-react"
+import Footer from "@/components/footer"
+import FAQs from "@/components/Faqs"
+import About from "@/components/Aboutus"
 
 export default function Home() {
   return (
@@ -52,9 +55,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+<About/>
       {/* Features */}
-      <section className="bg-card py-20">
+      {/* <section className="bg-card py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold mb-12 text-center">Why Pay Xpress?</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -71,14 +74,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-background border-t border-border py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-muted-foreground">
-          <p>© 2025 Pay Xpress. All rights reserved.</p>
-        </div>
-      </footer>
+      </section> */}
+      <FAQs/>
+ <Footer/>
+     
     </main>
   )
 }
